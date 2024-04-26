@@ -1,0 +1,9 @@
+:{
+let shape = pS "shape"
+    color = pS "color"
+    x = pF "x"
+    y = pF "y"
+    width = pF "width"
+    easeIn = pF "easeIn"
+    easeOut = pF "easeOut"
+:}
