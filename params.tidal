@@ -1,9 +1,22 @@
 :{
 let shape = pS "shape"
     color = pS "color"
-    x = pF "x"
-    y = pF "y"
+    colorPalette = pS "colorPalette"
+    colorPaletteIndex = pI "colorPaletteIndex"
+    fromX = pF "fromX"
+    fromY = pF "fromY"
+    toX = pF "toX"
+    toY = pF "toY"
+    x a = fromX a # toX a
+    y a = fromY a # toY a
+    vertical = fromY 1 # toY 0
+    horizontal = fromX 0 # toX 1
+    direction = pS "direction"
     width = pF "width"
+    length = pF "length"
+    radius = pF "radius"
     easeIn = pF "easeIn"
     easeOut = pF "easeOut"
+    ease a = easeIn a # easeOut a
+    background = pS "background"
 :}

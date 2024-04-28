@@ -19,9 +19,10 @@ let target =
              }
 :}
 
-let vizShape = OSC "/play" Named {requiredArgs = ["shape"]}
+let vizShape = OSC "/draw" Named {requiredArgs = ["shape"]}
+let bgShape = OSC "/background" Named {requiredArgs = ["background"]}
 
-tidal <- startStream defaultConfig [(superdirtTarget {oLatency = 0.05, oAddress = "127.0.0.1", oPort = 57120}, [superdirtShape]), (target, [vizShape])]
+tidal <- startStream defaultConfig [(superdirtTarget {oLatency = 0.05, oAddress = "127.0.0.1", oPort = 57120}, [superdirtShape]), (target, [vizShape, bgShape])]
 
 :{
 let only = (hush >>)
